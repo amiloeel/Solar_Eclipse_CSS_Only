@@ -1,0 +1,105 @@
+body{
+    animation: sky 5s ease-in-out infinite;
+}
+#main{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height:300px;
+    width: 300px;
+    margin-top: 250px;
+}
+
+#inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+#moon{
+    background: linear-gradient(224deg, #999, #000000);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    animation: run 5s ease-in-out infinite, rotating 5s linear infinite;
+}
+
+@keyframes run {
+    0%{
+        margin-left: 400px;
+    }
+    25%{
+        margin-left:0;
+    }
+    50%{
+        margin-left: -400px;
+    }
+    75%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 400px;
+    }
+}
+
+#sun{
+    background: linear-gradient(45deg, #d9720f, #cbd710);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: sunrays 5s ease-in-out infinite, rotating 5s linear infinite;
+
+}
+
+@keyframes sky {
+    0%{
+        background-color: #b2f9ff;    
+    }
+    25%{
+        background-color: #000008;    
+    }
+    50%{
+        background-color: #b2f9ff;    
+    }
+    75%{
+        background-color: #000008;
+    }
+    100%{
+        background-color: #b2f9ff;    
+    }
+}
+
+@keyframes sunrays {
+    0%{
+        box-shadow: 0px 0px 100px 20px #ffd800;
+    }
+    25%{
+        box-shadow: 0px 0px 5px 7px #ff8600; 
+    }
+    50%{
+        box-shadow: 0px 0px 100px 20px #ffd800;
+    }
+    75%{
+        box-shadow: 0px 0px 5px 7px #ff8600;
+    }
+    100%{
+        box-shadow: 0px 0px 100px 20px #ffd800;
+    }
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#author{
+    text-align:center;
+    font-family: monospace;
+    margin-top: 50px;
+}
